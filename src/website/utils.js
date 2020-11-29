@@ -11,6 +11,8 @@ export function getOffsetBoundingClientRect(element) {
 
 // From: https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
 export function isInViewport(elem) {
+  if (elem == null) return;
+
   const bounding = elem.getBoundingClientRect();
   return (
       bounding.top >= 0 &&

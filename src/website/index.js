@@ -53,7 +53,6 @@ function parseLocationQuery() {
 setupNavbar();
 // setupExtensionButton();
 setupSmoothScrolling();
-setupLibraries();
 setupTokenEditor();
 parseLocationQuery();
 setupHighlighting();

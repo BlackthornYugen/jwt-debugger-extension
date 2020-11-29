@@ -6,17 +6,7 @@ import {
   librariesSelect
 } from './dom-elements.js';
 
-import Isotope from 'isotope-layout';
 import log from 'loglevel';
-
-const librariesGrid = new Isotope(librariesElement, {
-  layoutMode: 'fitRows',
-  itemSelector: 'article',
-  percentPosition: true,
-  masonry: {
-    columnWidth: 'article'
-  }
-});
 
 function getStarsFromUrl(url) {
   return httpGet(url).then(data => {
