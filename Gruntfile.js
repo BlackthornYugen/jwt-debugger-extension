@@ -137,6 +137,9 @@ module.exports = (grunt) => {
         },
 
         webpack: {
+            options: {
+                stats: {maxModules: Infinity, exclude: undefined}
+            },
             websiteProd: require("./webpack.website-prod.js"),
             websiteDev: require("./webpack.website-dev.js"),
             extensionProd: require("./webpack.extension-prod.js"),

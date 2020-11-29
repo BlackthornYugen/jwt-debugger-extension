@@ -73,6 +73,7 @@
         "test": "grunt test",
         "test:unit": "grunt unit-tests",
         "build": "grunt build-website",
+        "build:dev": "grunt build-dev",
         "build:extension": "grunt build-extension"
     },
     "heroku-run-build-script": true
