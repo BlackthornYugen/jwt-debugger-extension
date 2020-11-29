@@ -77,8 +77,15 @@ export function deferToNextLoop(func) {
   setTimeout(func, 1);
 }
 
+/**
+ * Generate a token url relative to the current domain.
+ */
 export function copyTokenLink(token, publicKeyOptional) {
-  let url = `https://jwt.io/#debugger-io?token=${encodeURIComponent(token)}`;
+  let split = window.location.href.split('/');
+  let proto = split[0]; proto = proto.substring(0, proto.length - 1);
+  let domain = split[2];
+
+  let url = `${proto}://${domain}/#debugger-io?token=${encodeURIComponent(token)}`;
   if(publicKeyOptional) {
     url += `&publicKey=${encodeURIComponent(publicKeyOptional)}`;
   }
